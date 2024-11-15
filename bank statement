@@ -1,0 +1,63 @@
+s='='
+print(s.center(36,'='))
+k='Welcome to Times Bank'
+print(k.center(36,'-'))
+m='*'
+print(m.center(36,'*'))
+print("=<< 1.Open a new account        >>=")
+print("=<< 2.Withdraw Money            >>=")
+print("=<< 3.Deposit Money             >>=")
+print("=<< 4.Check Customers & Balance >>=")
+print("=<< 5.Exit/Quit                 >>=")
+
+while True:
+    sign_in=(input("Enter your choice :"))
+    if sign_in =="1":
+            print("-------------Open a New Account-------------")
+            a=input('Enter Your Name          :')
+            a=int(input('Enter Your DoB           :'))
+            a=int(input('Enter Your Age           :'))
+            a=int(input('Enter Your Address       :'))
+            a=int(input('Enter Your Mobile Number :'))
+            a=int(input('Enter Your Aadhar Number :'))
+            a=int(input('Enter Your Pan Number    :'))
+            balance=int(input('Enter Your Minimum Amount:'))
+            ac=int(input("Enter your Account Number:"))
+            Password=int(input('Enter Your Valid Password:'))
+            if balance>499:
+                print("**Your Account was Created by Successfully**")
+            else:
+                print("Your Minimum Balance is low so Not Created your acount")
+    elif sign_in =="2":
+            print("-------------Withdraw Money-------------")
+            amount=int(input("Enter the withdraw Amount:"))
+            balance=balance-amount
+            print(balance)
+            if balance>500:
+                print("**Amount Succesully withdraw**")
+            else:
+                print("Your Money Was Not Allowed To Withdraw")
+
+    elif sign_in =="3":
+            print("-------------Deposit Money-------------")
+            amount=int(input("Enter the deposit Amount:"))
+            balance=balance+amount
+            print(balance)
+            if balance>500:
+                print("**Amount Succesully Deposit**")
+            else:
+                print("Amount was Not Deposited")
+
+    elif sign_in =="4":
+            print("---------Check Customers & Balance---------")
+            if ac==int(input("Enter Your Current Account No:")):
+                if Password==int(input("Enter Your Password:")):
+                    print(balance)
+                else:
+                    print("Invalid Password")
+                    print("**Thanks For Coming**")
+            else:
+                        print("Account Was Not Found")
+    elif sign_in =="5":
+            print("---------Exit/Quit---------")
+            print("**Thanks For Coming**")
